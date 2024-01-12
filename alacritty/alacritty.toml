@@ -1,0 +1,49 @@
+[colors.bright]
+black = "#5c6370"
+blue = "#61afef"
+cyan = "#56b6c2"
+green = "#98c379"
+magenta = "#c678dd"
+red = "#e06c75"
+white = "#ECEFF4"
+yellow = "#d19a66"
+
+[colors.normal]
+black = "#1e2127"
+blue = "#11b5f6"
+cyan = "#88C0D0"
+green = "#90ff00"
+magenta = "#B48EAD"
+red = "#ff0000"
+white = "#ffffff"
+yellow = "#Ebdf8B"
+
+[colors.primary]
+background = "#000000"
+foreground = "#D8DEE9"
+
+[font]
+size = 8.0
+
+[font.bold]
+family = "Source Code Pro"
+style = "Bold"
+
+[font.bold_italic]
+family = "Source Code Pro"
+style = "Bold Italic"
+
+[font.italic]
+family = "Source Code Pro"
+style = "Italic"
+
+[font.normal]
+family = "Source Code Pro"
+style = "Regular"
+
+[window]
+dynamic_title = true
+padding = {x = 0, y = 0}
+dimensions = {columns = 100, lines = 30}
+decorations = "Full"
+decorations_theme_variant = "Dark"
