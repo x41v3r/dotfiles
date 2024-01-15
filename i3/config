@@ -23,20 +23,30 @@ font pango:monospace 8
 # https://wiki.archlinux.org/index.php/XDG_Autostart
 exec --no-startup-id dex --autostart --environment i3
 
-exec --no-startup-id ~/.config/polybar/launch.sh
-# exec --no-startup-id feh --bg-fill ~/contours.jpg
+# 
+exec_always flameshot
 
-# exec --no-startup-id fcitx
+exec_always fcitx5
 
-# exec --no-startup-id xset -dpms
+# picom
+exec_always picom
 
+# wallpappers
 exec --no-startup-id nitrogen --restore
+
+# polybar
+exec_always ~/.config/polybar/launch.sh
+
+# screenkey
+exec_always killall screenkey
+exec_always sleep 1; screenkey
+
 
 new_window none
 new_float normal
 
-gaps inner 4
-gaps outer 2
+gaps inner 5
+gaps outer 10
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
@@ -190,10 +200,10 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym semicolon resize grow width 10 px or 10 ppt
+        bindsym h resize shrink width 10 px or 10 ppt
+        bindsym j resize grow height 10 px or 10 ppt
+        bindsym k resize shrink height 10 px or 10 ppt
+        bindsym l resize grow width 10 px or 10 ppt
 
         # same bindings, but for the arrow keys
         bindsym Left resize shrink width 10 px or 10 ppt
@@ -206,18 +216,19 @@ mode "resize" {
         bindsym Escape mode "default"
         bindsym $mod+r mode "default"
 }
-
 bindsym $mod+r mode "resize"
 
 for_window [instance="nitrogen"] floating enable
-for_window [instance="qv2ray"] floating enable
 for_window [instance="audacity"] floating enable
+for_window [instance="qbittorrent"] floating enable
+for_window [instance="flameshot"] floating enable
+for_window [instance="fcitx5-config-qt"] floating enable
 
 # for_window [instance="kicad"] floating enable
 # for_window [instance="bash /usr/bin/minecraft"] floating enable
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-#bar {
-#        status_command i3status
-#}
+# bar {
+#         status_command i3status
+# }
