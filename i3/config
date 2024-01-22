@@ -46,7 +46,7 @@ new_window none
 new_float normal
 
 gaps inner 5
-gaps outer 10
+gaps outer 8
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
