@@ -222,7 +222,10 @@ for_window [instance="nitrogen"] floating enable
 for_window [instance="audacity"] floating enable
 for_window [instance="qbittorrent"] floating enable
 for_window [instance="flameshot"] floating enable
+for_window [instance="kicad"] floating enable
 for_window [instance="fcitx5-config-qt"] floating enable
+for_window [instance="eclipse"] floating enable
+for_window [instance="dbeaver"] floating enable
 
 # for_window [instance="kicad"] floating enable
 # for_window [instance="bash /usr/bin/minecraft"] floating enable

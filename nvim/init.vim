@@ -9,9 +9,16 @@ colorscheme monokai-phoenix
 let mkdp_browser = 'min'
 let mkdp_theme = 'light'
 
+" airline symbols
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+
 call plug#begin('~/.config/nvim/plugged')
 
 Plug 'vim-airline/vim-airline'
+Plug 'nvim-neo-tree/neo-tree.nvim'
 Plug 'neoclide/coc.nvim',{'branch': 'release'}
 
 Plug 'turbio/bracey.vim'
